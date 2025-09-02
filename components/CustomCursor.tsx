@@ -20,7 +20,7 @@ export default function CustomCursor() {
         const isClickable = 
           hoveredElement.tagName === 'A' ||
           hoveredElement.tagName === 'BUTTON' ||
-          hoveredElement.onclick !== null ||
+          (hoveredElement as HTMLElement).onclick !== null ||
           hoveredElement.closest('a') !== null ||
           hoveredElement.closest('button') !== null ||
           window.getComputedStyle(hoveredElement).cursor === 'pointer';
