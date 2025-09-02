@@ -48,12 +48,34 @@ export default function PricingSection() {
                   animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
+                  {/* Original Price with Strikethrough */}
+                  <div className="flex flex-col items-center justify-center mb-2">
+                    <p className="text-2xl sm:text-3xl text-gray-400 line-through">
+                      70,000円
+                    </p>
+                  </div>
+                  
+                  {/* Current Price */}
                   <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4">
                     <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-secondary-900">
                       50,000
                     </p>
                     <span className="text-lg sm:text-xl md:text-2xl text-secondary-600">円(税込)</span>
                   </div>
+                  
+                  {/* Discount Badge */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={isInView ? { scale: 1 } : { scale: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5, type: "spring" }}
+                    className="mt-4"
+                  >
+                    <div className="inline-block bg-red-500 text-white px-4 py-2 rounded-full">
+                      <p className="text-sm sm:text-base font-bold">
+                        期間限定！公式LINE登録で20,000円OFF
+                      </p>
+                    </div>
+                  </motion.div>
                 </motion.div>
               </div>
 
