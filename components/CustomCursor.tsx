@@ -59,50 +59,28 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Main cursor dot */}
-      <motion.div
-        className="fixed top-0 left-0 w-2 h-2 bg-primary-600 rounded-full pointer-events-none z-[9999] mix-blend-difference"
-        animate={{
-          x: mousePosition.x - 4,
-          y: mousePosition.y - 4,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 500,
-          damping: 28,
-          mass: 0.5,
+      {/* Main cursor dot - instant tracking */}
+      <div
+        className="fixed top-0 left-0 w-3 h-3 bg-gray-900 rounded-full pointer-events-none z-[9999]"
+        style={{
+          transform: `translate(${mousePosition.x - 6}px, ${mousePosition.y - 6}px)`,
         }}
       />
       
-      {/* Outer ring */}
+      {/* Smooth following circle */}
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 border border-primary-400 rounded-full pointer-events-none z-[9998] mix-blend-difference"
+        className="fixed top-0 left-0 w-8 h-8 border border-gray-400 rounded-full pointer-events-none z-[9998]"
         animate={{
           x: mousePosition.x - 16,
           y: mousePosition.y - 16,
-          scale: isPointer ? 1.5 : 1,
-          borderColor: isPointer ? '#3b82f6' : '#93c5fd',
+          scale: isPointer ? 1.3 : 1,
+          borderWidth: isPointer ? 2 : 1,
         }}
         transition={{
           type: "spring",
-          stiffness: 250,
-          damping: 20,
-          mass: 0.8,
-        }}
-      />
-      
-      {/* Trail effect */}
-      <motion.div
-        className="fixed top-0 left-0 w-1 h-1 bg-primary-300 rounded-full pointer-events-none z-[9997] opacity-50"
-        animate={{
-          x: mousePosition.x - 2,
-          y: mousePosition.y - 2,
-        }}
-        transition={{
-          type: "spring",
-          stiffness: 100,
+          stiffness: 200,
           damping: 25,
-          mass: 1,
+          mass: 0.5,
         }}
       />
     </>

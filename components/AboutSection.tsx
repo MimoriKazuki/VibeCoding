@@ -1,25 +1,16 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
 
 export default function AboutSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "-200px" });
-  
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  });
-  
-  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
 
   return (
     <section id="about" className="py-32 px-6 relative overflow-hidden bg-white" ref={ref}>
-      <motion.div className="container mx-auto max-w-6xl relative z-10" style={{ opacity }}>
+      <motion.div className="container mx-auto max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}

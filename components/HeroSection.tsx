@@ -1,27 +1,18 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
 
 export default function HeroSection() {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"]
-  });
-  
-  const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8]);
-  const imageY = useTransform(scrollYProgress, [0, 1], [0, 150]);
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+    <section ref={ref} className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-white">
       {/* Dot pattern background */}
       <div className="absolute inset-0">
         {/* Blue dots on right side */}
-        <div className="absolute right-0 top-0 w-1/2 h-full">
+        <div className="absolute right-0 top-0 w-1/3 sm:w-2/5 md:w-1/2 h-full">
           <div 
             className="w-full h-full opacity-40"
             style={{
@@ -32,7 +23,7 @@ export default function HeroSection() {
           />
         </div>
         {/* Cyan dots on left side */}
-        <div className="absolute left-0 bottom-0 w-1/3 h-1/2">
+        <div className="absolute left-0 bottom-0 w-1/4 sm:w-1/3 h-1/3 sm:h-2/5 md:h-1/2">
           <div 
             className="w-full h-full opacity-40"
             style={{
@@ -45,8 +36,7 @@ export default function HeroSection() {
       </div>
       
       <motion.div
-        className="relative z-10 text-center px-6"
-        style={{ y, opacity, scale }}
+        className="relative z-10 text-center px-4 sm:px-6 lg:px-8 w-full max-w-7xl mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -58,20 +48,20 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-gray-900 leading-tight">
             <motion.span
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="block"
             >
-              誰でもエンジニアに。
+              誰でもエンジニア。
             </motion.span>
             <motion.span
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="block mt-4"
+              className="block mt-2 sm:mt-3 md:mt-4"
             >
               学びを次の次元に。
             </motion.span>
@@ -81,7 +71,7 @@ export default function HeroSection() {
       
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 sm:bottom-10 md:bottom-12 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}

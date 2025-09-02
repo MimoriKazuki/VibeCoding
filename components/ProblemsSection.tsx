@@ -31,23 +31,23 @@ export default function ProblemsSection() {
   ];
 
   return (
-    <section id="problems" className="py-20 px-6 bg-gradient-to-b from-white to-secondary-50" ref={ref}>
-      <div className="container mx-auto max-w-7xl">
+    <section id="problems" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-secondary-50 overflow-x-hidden" ref={ref}>
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
             こんな悩みありませんか？
           </h2>
-          <p className="text-lg text-secondary-600">
+          <p className="text-base sm:text-lg text-secondary-600">
             プログラミング学習でよくある悩み
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {problems.map((problem, index) => (
             <motion.div
               key={index}
@@ -57,7 +57,7 @@ export default function ProblemsSection() {
               className="flex flex-col items-center"
             >
               {/* Speech Bubble */}
-              <div className="relative mb-10 w-full max-w-[360px]">
+              <div className="relative mb-10 w-full max-w-[320px] sm:max-w-[360px]">
                 <motion.div
                   initial={{ scale: 0, opacity: 0 }}
                   animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
@@ -72,16 +72,16 @@ export default function ProblemsSection() {
                 >
                   {/* Speech bubble using SVG background */}
                   <div 
-                    className="relative w-full h-24"
+                    className="relative w-full h-20 sm:h-24"
                     style={{
-                      backgroundImage: `url('/images/e1563_1.svg')`,
+                      backgroundImage: `url('/images/e1563_1_blue.svg')`,
                       backgroundSize: '100% 100%',
                       backgroundRepeat: 'no-repeat',
                       backgroundPosition: 'center',
                     }}
                   >
-                    <div className="h-full w-full flex items-center justify-center px-4" style={{ paddingBottom: '20px' }}>
-                      <p className="text-base md:text-lg text-gray-800 font-medium text-center leading-relaxed">
+                    <div className="h-full w-full flex items-center justify-center px-1 sm:px-2 md:px-3" style={{ paddingBottom: '20px' }}>
+                      <p className="text-[0.65rem] sm:text-xs md:text-sm lg:text-base xl:text-lg text-gray-800 font-medium text-center leading-tight break-words">
                         {problem.message}
                       </p>
                     </div>
@@ -94,14 +94,14 @@ export default function ProblemsSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.6, delay: 0.5 + index * 0.15 }}
-                className="relative w-40 h-40 md:w-48 md:h-48"
+                className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48"
               >
                 <Image
                   src={problem.imageUrl}
                   alt={problem.alt}
                   fill
                   className="object-contain"
-                  sizes="(max-width: 768px) 160px, 192px"
+                  sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, 192px"
                 />
               </motion.div>
             </motion.div>
@@ -113,18 +113,18 @@ export default function ProblemsSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 text-center"
+          className="mt-12 sm:mt-16 text-center"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="inline-block"
           >
-            <svg className="w-12 h-12 text-primary-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-10 h-10 sm:w-12 sm:h-12 text-primary-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </motion.div>
-          <p className="mt-4 text-xl font-bold text-primary-600">
+          <p className="mt-4 text-lg sm:text-xl font-bold text-primary-600">
             そんな悩みを解決します！
           </p>
         </motion.div>

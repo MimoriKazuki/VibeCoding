@@ -28,26 +28,17 @@ export default function Header() {
         isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-transparent'
       }`}
     >
-      <nav className="container mx-auto px-6 py-4">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-16 py-3 sm:py-4">
         <div className="flex justify-between items-center">
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="flex items-center gap-2"
+            className="flex items-center"
           >
-            {/* Code icon */}
-            <div className="text-primary-500">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-                <line x1="12" y1="2" x2="12" y2="22" transform="rotate(15 12 12)"></line>
-              </svg>
-            </div>
-            {/* Text logo */}
-            <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
               誰でもエンジニア
-            </span>
+            </h1>
           </motion.div>
-          <ul className="hidden md:flex space-x-8">
+          <ul className="hidden md:flex space-x-4 lg:space-x-8">
             {[
               { id: 'problems', label: '悩み' },
               { id: 'benefits', label: '特徴' },
@@ -59,7 +50,7 @@ export default function Header() {
               <motion.li key={item.id} whileHover={{ scale: 1.1 }}>
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-primary-600 transition-colors"
+                  className="text-sm lg:text-base text-gray-700 hover:text-primary-600 transition-colors"
                 >
                   {item.label}
                 </button>

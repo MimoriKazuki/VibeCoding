@@ -29,16 +29,16 @@ export default function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="py-32 px-6 bg-gray-50" ref={ref}>
-      <div className="container mx-auto max-w-4xl">
+    <section id="faq" className="py-16 sm:py-24 lg:py-32 overflow-x-hidden bg-gray-50" ref={ref}>
+      <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <motion.h2
-            className="text-5xl md:text-7xl font-bold text-gray-900 mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6"
             initial={{ scale: 0.8 }}
             animate={isInView ? { scale: 1 } : { scale: 0.8 }}
             transition={{ duration: 0.6 }}
@@ -46,9 +46,9 @@ export default function FAQSection() {
             よくある質問
           </motion.h2>
           <motion.div 
-            className="w-32 h-1 bg-primary-500 mx-auto"
+            className="w-24 sm:w-32 h-1 bg-primary-500 mx-auto"
             initial={{ width: 0 }}
-            animate={isInView ? { width: 128 } : { width: 0 }}
+            animate={isInView ? { width: 'auto' } : { width: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           />
         </motion.div>
@@ -64,10 +64,10 @@ export default function FAQSection() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full text-left p-6 hover:bg-gray-50 transition-colors"
+                className="w-full text-left p-4 sm:p-6 hover:bg-gray-50 transition-colors"
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-bold text-gray-900 pr-4">
+                  <h3 className="text-sm sm:text-base font-bold text-gray-900 pr-4">
                     {faq.question}
                   </h3>
                   <motion.div
@@ -90,8 +90,8 @@ export default function FAQSection() {
                 transition={{ duration: 0.3 }}
                 className="overflow-hidden"
               >
-                <div className="px-6 pb-6">
-                  <p className="text-gray-600 leading-relaxed">
+                <div className="px-4 sm:px-6 pb-4 sm:pb-6">
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -104,9 +104,9 @@ export default function FAQSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 text-center"
+          className="mt-8 sm:mt-12 text-center"
         >
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6">
             その他ご不明な点がございましたら、お気軽にお問い合わせください
           </p>
           <motion.a
@@ -115,7 +115,7 @@ export default function FAQSection() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block text-white px-8 py-4 text-lg font-semibold transition-all rounded-lg"
+            className="inline-block text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all rounded-lg"
             style={{ 
               backgroundColor: '#06C755',
               boxShadow: '0 2px 4px rgba(0,0,0,0.1)'

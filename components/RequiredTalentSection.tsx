@@ -49,8 +49,8 @@ export default function RequiredTalentSection() {
   ];
 
   return (
-    <section id="talent" className="py-32 px-6 bg-primary-50" ref={ref}>
-      <div className="container mx-auto max-w-6xl">
+    <section id="talent" className="py-16 sm:py-24 lg:py-32 overflow-x-hidden bg-primary-50" ref={ref}>
+      <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
@@ -58,7 +58,7 @@ export default function RequiredTalentSection() {
           className="text-center mb-16"
         >
           <motion.h2
-            className="text-5xl md:text-7xl font-bold text-gray-900 mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6"
             initial={{ scale: 0.8 }}
             animate={isInView ? { scale: 1 } : { scale: 0.8 }}
             transition={{ duration: 0.6 }}
@@ -71,36 +71,34 @@ export default function RequiredTalentSection() {
             animate={isInView ? { width: 128 } : { width: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           />
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
             バイブコーディングができる人材こそ、これからの時代に必要
           </p>
         </motion.div>
 
-        <div className="space-y-20 mb-16">
+        <div className="space-y-12 sm:space-y-16 lg:space-y-20 mb-16">
           {talents.map((talent, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              className={`flex items-center gap-12 ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}
+              className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
             >
-              <div className="flex-1">
-                <div className={`bg-gradient-to-br ${talent.color} p-8 rounded-2xl`}>
-                  <Image
-                    src={talent.image}
-                    alt={talent.title}
-                    width={300}
-                    height={300}
-                    className="w-full h-auto max-w-sm mx-auto"
-                  />
-                </div>
+              <div className="w-full lg:flex-1">
+                <Image
+                  src={talent.image}
+                  alt={talent.title}
+                  width={300}
+                  height={300}
+                  className="w-full h-auto max-w-xs sm:max-w-sm mx-auto"
+                />
               </div>
-              <div className="flex-1 space-y-6">
-                <h3 className={`text-3xl font-bold text-gray-900 pb-3 border-b-3 ${talent.borderColor}`}>
+              <div className="w-full lg:flex-1 space-y-4 sm:space-y-6 px-4 lg:px-0">
+                <h3 className={`text-2xl sm:text-3xl font-bold text-gray-900 pb-3 border-b-2 sm:border-b-3 ${talent.borderColor}`}>
                   {talent.title}
                 </h3>
-                <p className="text-lg text-gray-600">
+                <p className="text-base sm:text-lg text-gray-600">
                   {talent.description}
                 </p>
                 <ul className="space-y-3">
@@ -112,8 +110,8 @@ export default function RequiredTalentSection() {
                       transition={{ duration: 0.4, delay: 0.4 + index * 0.1 + i * 0.05 }}
                       className="flex items-start space-x-3"
                     >
-                      <span className={`text-2xl mt-1 ${talent.borderColor.replace('border-', 'text-')}`}>•</span>
-                      <span className="text-gray-700 leading-relaxed">{skill}</span>
+                      <span className={`text-lg sm:text-2xl mt-1 ${talent.borderColor.replace('border-', 'text-')}`}>•</span>
+                      <span className="text-sm sm:text-base text-gray-700 leading-relaxed">{skill}</span>
                     </motion.li>
                   ))}
                 </ul>

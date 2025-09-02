@@ -6,6 +6,7 @@ import SplashScreen from '@/components/SplashScreen';
 import HeroSection from '@/components/HeroSection';
 import MarketProblemSection from '@/components/MarketProblemSection';
 import RequiredTalentSection from '@/components/RequiredTalentSection';
+import VisionSection from '@/components/VisionSection';
 import PricingSection from '@/components/PricingSection';
 import FAQSection from '@/components/FAQSection';
 import CustomCursor from '@/components/CustomCursor';
@@ -24,6 +25,7 @@ export default function Home() {
         <BenefitsSection />
         <MarketProblemSection />
         <RequiredTalentSection />
+        <VisionSection />
         <PricingSection />
         <FAQSection />
       </main>
