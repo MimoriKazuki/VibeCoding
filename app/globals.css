@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom Cursor Styles */
+  * {
+    cursor: none !important;
+  }
+  
+  a, button {
+    cursor: none !important;
+  }
+  
+  /* Ensure cursor is hidden on all interactive elements */
+  input, textarea, select {
+    cursor: none !important;
+  }
+}
