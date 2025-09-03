@@ -29,8 +29,50 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "誰でもエンジニア | AIを活用した新しい学習プラットフォーム",
-  description: "AIツールを活用して、未経験から3ヶ月でエンジニアを目指す。動画講座とライブ配信で実践的なスキルを習得。",
+  metadataBase: new URL('https://daredemo-engineer.com'),
+  title: "誰でもエンジニア | 超実践型AIコーディング講座 - 感覚で指示を出すだけでWebサイトが作れる",
+  description: "AIコーディングで誰でもエンジニアになれる時代。従来のプログラミング学習とは違い、感覚的な指示でホームページやLPが作れる超実践型講座。HP・LP制作講座が今だけ20,000円（通常30,000円）。",
+  keywords: "AIコーディング, プログラミング学習, エンジニア, 未経験, ノーコード, ChatGPT, Claude, AI開発, Webサイト制作, LP制作, オンライン講座",
+  icons: {
+    icon: '/logo.svg',
+    apple: '/logo.svg',
+  },
+  openGraph: {
+    title: "誰でもエンジニア | 超実践型AIコーディング講座",
+    description: "感覚で指示を出すだけでWebサイトが作れる。AIコーディングで誰でもエンジニアになれる超実践型講座。リリース記念特別価格実施中！",
+    url: "https://daredemo-engineer.com",
+    siteName: "誰でもエンジニア",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "誰でもエンジニア - 超実践型AIコーディング講座",
+      }
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "誰でもエンジニア | 超実践型AIコーディング講座",
+    description: "感覚で指示を出すだけでWebサイトが作れる。AIコーディングで誰でもエンジニアになれる超実践型講座。",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "google-verification-code",
+  },
 };
 
 export default function RootLayout({

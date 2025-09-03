@@ -72,7 +72,7 @@ export default function BenefitsSection() {
               
               {/* Connecting dotted line (except for last item) */}
               {index < benefits.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-3 w-6 transform -translate-y-1/2">
+                <div className="hidden lg:block absolute top-1/2 left-full w-6 transform -translate-y-1/2">
                   <div className="border-t-2 border-dotted border-primary-300 w-full" />
                 </div>
               )}

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /out/
+
+Sitemap: https://daredemo-engineer.com/sitemap.xml

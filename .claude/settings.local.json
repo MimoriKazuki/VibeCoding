@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//var/folders/h2/bp8c5ty547qbq7vb6ng8jgy40000gq/T/TemporaryItems/NSIRD_screencaptureui_gwDNev/**)",
+      "Read(//var/folders/h2/bp8c5ty547qbq7vb6ng8jgy40000gq/T/TemporaryItems/NSIRD_screencaptureui_CJU29u/**)",
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)",
+      "Read(//var/folders/h2/bp8c5ty547qbq7vb6ng8jgy40000gq/T/TemporaryItems/NSIRD_screencaptureui_j5HBYE/**)",
+      "Bash(grep:*)",
+      "Bash(python3:*)",
+      "Read(//var/folders/h2/bp8c5ty547qbq7vb6ng8jgy40000gq/T/TemporaryItems/NSIRD_screencaptureui_Zg9IJ3/**)",
+      "Read(//var/folders/h2/bp8c5ty547qbq7vb6ng8jgy40000gq/T/TemporaryItems/NSIRD_screencaptureui_SxKD7L/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

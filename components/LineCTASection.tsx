@@ -18,15 +18,13 @@ export default function LineCTASection() {
           className="text-center text-white"
         >
           <motion.div
-            initial={{ scale: 0 }}
-            animate={isInView ? { scale: 1 } : { scale: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-block mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="mb-6"
           >
-            <div className="bg-white rounded-full p-4">
-              <svg className="w-16 h-16 text-primary-400" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12c0 1.86.5 3.59 1.38 5.08L2 22l4.92-1.38C8.41 21.5 10.14 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.21-.43-4.56-1.17l-.33-.17-3.42.96.96-3.42-.17-.33C3.43 15.21 3 13.66 3 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/>
-              </svg>
+            <div className="inline-block bg-yellow-400 text-primary-600 px-6 py-2 rounded-full font-bold text-lg mb-4">
+              受講受付中
             </div>
           </motion.div>
 
@@ -38,9 +36,9 @@ export default function LineCTASection() {
           >
             今すぐLINE登録で
             <br />
-            <span className="text-white/90">特別割引クーポン</span>
+            <span className="text-yellow-300">詳細情報</span>を
             <br />
-            プレゼント！
+            お届け！
           </motion.h2>
 
           <motion.div
@@ -54,7 +52,7 @@ export default function LineCTASection() {
             </h3>
             <div className="space-y-3 text-left max-w-md mx-auto">
               {[
-                "特別割引クーポン（先着順）",
+                "講座詳細資料プレゼント",
                 "無料体験講座（3本）視聴権",
                 "AI活用ガイドブックプレゼント",
                 "個別相談会への無料参加権"
@@ -90,27 +88,7 @@ export default function LineCTASection() {
             </a>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="mt-8"
-          >
-            <div className="bg-white/20 backdrop-blur text-white inline-block px-6 py-3 font-medium text-lg rounded-full font-lato">
-              残り枠わずか
-            </div>
-          </motion.div>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-8 text-lg font-noto text-white/90"
-          >
-            ※LINEアカウントをお持ちでない方は、
-            <br />
-            まずLINEアプリをダウンロードしてください
-          </motion.p>
         </motion.div>
       </div>
     </section>
