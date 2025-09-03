@@ -9,7 +9,11 @@
       "Bash(grep:*)",
       "Bash(python3:*)",
       "Read(//var/folders/h2/bp8c5ty547qbq7vb6ng8jgy40000gq/T/TemporaryItems/NSIRD_screencaptureui_Zg9IJ3/**)",
-      "Read(//var/folders/h2/bp8c5ty547qbq7vb6ng8jgy40000gq/T/TemporaryItems/NSIRD_screencaptureui_SxKD7L/**)"
+      "Read(//var/folders/h2/bp8c5ty547qbq7vb6ng8jgy40000gq/T/TemporaryItems/NSIRD_screencaptureui_SxKD7L/**)",
+      "Bash(git push:*)",
+      "Bash(git config:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
