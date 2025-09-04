@@ -4,6 +4,7 @@ import MediaCoverageSection from '@/components/MediaCoverageSection';
 import MarketProblemSection from '@/components/MarketProblemSection';
 import RequiredTalentSection from '@/components/RequiredTalentSection';
 import VisionSection from '@/components/VisionSection';
+import FutureSection from '@/components/FutureSection';
 import PricingSection from '@/components/PricingSection';
 import FAQSection from '@/components/FAQSection';
 import ProblemsSection from '@/components/ProblemsSection';
@@ -23,6 +24,7 @@ export default function Home() {
         <ModernCTASection />
         <ProblemsSection />
         <BenefitsSection />
+        <FutureSection />
         <MarketProblemSection />
         <RequiredTalentSection />
         <VisionSection />
