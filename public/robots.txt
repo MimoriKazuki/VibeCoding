@@ -3,5 +3,21 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /out/
+Disallow: /node_modules/
+Crawl-delay: 1
 
+# Googlebot specific
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bingbot specific  
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Sitemap location
 Sitemap: https://daredemo-engineer.com/sitemap.xml
+
+# VibeCoding and related keywords for better indexing
+# バイブコーディング, VibeCoding, プログラミング教材, AI学習

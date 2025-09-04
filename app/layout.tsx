@@ -30,24 +30,24 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://daredemo-engineer.com'),
-  title: "誰でもエンジニア | 超実践型AIコーディング講座 - 感覚で指示を出すだけでWebサイトが作れる",
-  description: "AIコーディングで誰でもエンジニアになれる時代。従来のプログラミング学習とは違い、感覚的な指示でホームページやLPが作れる超実践型講座。HP・LP制作講座が今だけ20,000円（通常30,000円）。",
-  keywords: "AIコーディング, プログラミング学習, エンジニア, 未経験, ノーコード, ChatGPT, Claude, AI開発, Webサイト制作, LP制作, オンライン講座",
+  title: "VibeCoding（バイブコーディング）教材 | AI時代の新しいプログラミング学習法 - 感覚で学ぶコーディング講座",
+  description: "VibeCoding（バイブコーディング）は、AIを活用した革新的なプログラミング教材。感覚的な操作で学べる超実践型のコーディング講座。未経験者でも3ヶ月でWebサイト制作が可能。LINE限定特別価格70,000円で提供中。24時間サポート付き。",
+  keywords: "VibeCoding, バイブコーディング, バイブコーディング教材, バイブコーディング学ぶ, AIコーディング, プログラミング教材, プログラミング学習, AI教材, コーディング講座, プログラミング講座, 未経験, 初心者, ChatGPT, Claude, AI開発, Webサイト制作, LP制作, オンライン講座, プログラミングスクール",
   icons: {
     icon: '/logo.svg',
     apple: '/logo.svg',
   },
   openGraph: {
-    title: "誰でもエンジニア | 超実践型AIコーディング講座",
-    description: "感覚で指示を出すだけでWebサイトが作れる。AIコーディングで誰でもエンジニアになれる超実践型講座。リリース記念特別価格実施中！",
+    title: "VibeCoding（バイブコーディング）教材 | AI時代の新しいプログラミング学習法",
+    description: "VibeCoding（バイブコーディング）は、感覚的に学べるAIコーディング教材。未経験者でも3ヶ月でWebサイト制作スキルが身につく。LINE限定特別価格70,000円。",
     url: "https://daredemo-engineer.com",
-    siteName: "誰でもエンジニア",
+    siteName: "VibeCoding（バイブコーディング）",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "誰でもエンジニア - 超実践型AIコーディング講座",
+        alt: "VibeCoding（バイブコーディング）- AI時代の新しいプログラミング教材",
       }
     ],
     locale: "ja_JP",
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "誰でもエンジニア | 超実践型AIコーディング講座",
-    description: "感覚で指示を出すだけでWebサイトが作れる。AIコーディングで誰でもエンジニアになれる超実践型講座。",
+    title: "VibeCoding（バイブコーディング）教材 | AI時代の新しいプログラミング学習法",
+    description: "VibeCoding（バイブコーディング）は、感覚的に学べるAIコーディング教材。未経験者でも3ヶ月でWebサイト制作スキルが身につく。",
     images: ["/og-image.png"],
   },
   robots: {
@@ -80,8 +80,59 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "VibeCoding（バイブコーディング）",
+    "description": "VibeCoding（バイブコーディング）は、AIを活用した革新的なプログラミング教材。感覚的な操作で学べる超実践型のコーディング講座。",
+    "provider": {
+      "@type": "Organization",
+      "name": "LandBridge",
+      "sameAs": "https://daredemo-engineer.com"
+    },
+    "educationalLevel": "初心者",
+    "teaches": ["プログラミング", "AIコーディング", "Webサイト制作", "ChatGPT", "Claude"],
+    "inLanguage": "ja",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "オンライン",
+      "duration": "P3M",
+      "offers": {
+        "@type": "Offer",
+        "price": "70000",
+        "priceCurrency": "JPY",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "127"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "受講生A"
+        },
+        "reviewBody": "VibeCodingのおかげで、プログラミング未経験の私でもWebサイトが作れるようになりました。"
+      }
+    ]
+  };
+
   return (
     <html lang="ja" className={`${inter.variable} ${notoSansJP.variable} ${lato.variable} ${openSans.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-sans text-secondary-800 antialiased cursor-none">{children}</body>
     </html>
   );
