@@ -64,10 +64,10 @@ export default function VisionSection() {
               バイブコーディングで体感的にプログラミングを学び、頭ではなく感覚で理解する新しいスタイルのエンジニアになれます。
             </p>
             <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-              動画・ライブ配信・コミュニティサポートにより、直感的なコーディング能力と創造性を身につけ、ユーザーの心に響くプロダクトを作れる感性豊かなエンジニアへ成長。
+              動画により、直感的なコーディング能力と創造性を身につけ、ユーザーの心に響くプロダクトを作れる感性豊かなエンジニアへ成長。
             </p>
             <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-              従来の技術者とは一線を画す、革新的で人間味あふれるプログラマーとして活躍できます。
+              自然口語で感覚的にプログラミングが可能。
             </p>
 
             {/* Key Points */}
