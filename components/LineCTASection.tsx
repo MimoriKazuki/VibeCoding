@@ -52,10 +52,8 @@ export default function LineCTASection() {
             </h3>
             <div className="space-y-3 text-left max-w-md mx-auto">
               {[
-                "講座詳細資料プレゼント",
-                "無料体験講座（3本）視聴権",
-                "AI活用ガイドブックプレゼント",
-                "個別相談会への無料参加権"
+                "Claude Codeスタートガイド",
+                "無料相談"
               ].map((item, index) => (
                 <motion.div
                   key={index}

@@ -16,8 +16,12 @@ export default function Header() {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    if (id === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const element = document.getElementById(id);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -31,9 +35,11 @@ export default function Header() {
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-16 py-3 sm:py-4">
         <div className="flex justify-between items-center">
-          <motion.div
+          <motion.button
             whileHover={{ scale: 1.02 }}
-            className="flex items-center gap-3"
+            whileTap={{ scale: 0.98 }}
+            className="flex items-center gap-3 cursor-pointer"
+            onClick={() => scrollToSection('top')}
           >
             <Image
               src="/logo.svg"
@@ -45,12 +51,14 @@ export default function Header() {
             <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
               誰でもエンジニア
             </h1>
-          </motion.div>
+          </motion.button>
           <div className="flex items-center gap-4 lg:gap-6">
             <ul className="hidden md:flex space-x-4 lg:space-x-6">
               {[
                 { id: 'problems', label: '悩み' },
                 { id: 'benefits', label: '特徴' },
+                { id: 'market', label: '市場' },
+                { id: 'vision', label: 'ビジョン' },
                 { id: 'pricing', label: '料金' },
                 { id: 'faq', label: 'FAQ' },
               ].map((item) => (

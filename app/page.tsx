@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import MediaCoverageSection from '@/components/MediaCoverageSection';
+import ServiceFeatureSection from '@/components/ServiceFeatureSection';
 import MarketProblemSection from '@/components/MarketProblemSection';
 import RequiredTalentSection from '@/components/RequiredTalentSection';
 import VisionSection from '@/components/VisionSection';
@@ -21,6 +22,7 @@ export default function Home() {
       <main className="min-h-screen bg-white">
         <HeroSection />
         <MediaCoverageSection />
+        <ServiceFeatureSection />
         <ModernCTASection />
         <ProblemsSection />
         <BenefitsSection />

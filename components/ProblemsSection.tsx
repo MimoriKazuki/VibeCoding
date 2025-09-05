@@ -125,7 +125,7 @@ export default function ProblemsSection() {
             </svg>
           </motion.div>
           <p className="mt-4 text-lg sm:text-xl font-bold text-primary-600">
-            そんな悩みを解決します！
+            そんな悩みを「誰でもエンジニア」で解決します！
           </p>
         </motion.div>
       </div>
