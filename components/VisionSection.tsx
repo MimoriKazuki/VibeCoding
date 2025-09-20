@@ -24,7 +24,7 @@ export default function VisionSection() {
             animate={isInView ? { scale: 1 } : { scale: 0.8 }}
             transition={{ duration: 0.6 }}
           >
-            「誰でもエンジニア」で目指す姿
+            「AI人材養成所」で目指す姿
           </motion.h2>
           <motion.div 
             className="w-32 h-1 bg-primary-500 mx-auto"
@@ -45,7 +45,7 @@ export default function VisionSection() {
             <div className="relative">
               <Image
                 src="/images/20970_color.svg"
-                alt="誰でもエンジニアで目指す姿"
+                alt="AI人材養成所で目指す姿"
                 width={400}
                 height={400}
                 className="w-full h-auto max-w-md mx-auto"

@@ -56,7 +56,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="block"
             >
-              誰でもエンジニア。
+              AI人材養成所。
             </motion.span>
             <motion.span
               initial={{ opacity: 0, x: 20 }}

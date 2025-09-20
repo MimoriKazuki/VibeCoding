@@ -90,7 +90,7 @@ export default function SplashScreen() {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="text-2xl md:text-3xl font-bold text-gray-800 mb-3"
             >
-              誰でもエンジニア
+              AI人材養成所
             </motion.h1>
             
             <motion.p

@@ -43,13 +43,13 @@ export default function Header() {
           >
             <Image
               src="/logo.svg"
-              alt="誰でもエンジニア"
+              alt="AI人材養成所"
               width={40}
               height={40}
               className="w-8 h-8 sm:w-10 sm:h-10"
             />
             <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
-              誰でもエンジニア
+              AI人材養成所
             </h1>
           </motion.button>
           <div className="flex items-center gap-4 lg:gap-6">

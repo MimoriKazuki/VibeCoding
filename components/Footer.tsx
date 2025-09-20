@@ -35,7 +35,7 @@ export default function Footer() {
               viewport={{ once: true }}
             >
               <h3 className="text-2xl font-bold mb-4 font-noto">
-                誰でもエンジニア
+                AI人材養成所
               </h3>
               <p className="text-secondary-300 text-sm mb-6 leading-relaxed font-noto">
                 超実践型AIコーディングを学び、
@@ -121,7 +121,7 @@ export default function Footer() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center text-secondary-400 text-xs sm:text-sm">
             <p className="font-noto">
-              © {currentYear} 誰でもエンジニア. All rights reserved.
+              © {currentYear} AI人材養成所. All rights reserved.
             </p>
           </div>
         </div>
