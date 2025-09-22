@@ -67,9 +67,9 @@ export default function FloatingCTAButton() {
                 </svg>
               </div>
               
-              <div className="pr-2 whitespace-nowrap">
-                <div className="font-bold text-sm">LINEで詳細確認</div>
-                <div className="text-xs opacity-90">特別価格 月1万円</div>
+              <div className="pr-2 whitespace-nowrap text-center">
+                <div className="font-bold text-base">LINE公式登録</div>
+                <div className="text-sm">AI活用ロードマッププレゼント</div>
               </div>
             </motion.a>
           </motion.div>

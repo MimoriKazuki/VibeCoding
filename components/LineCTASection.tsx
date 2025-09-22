@@ -36,9 +36,9 @@ export default function LineCTASection() {
           >
             今すぐLINE登録で
             <br />
-            <span className="text-yellow-300">詳細情報</span>を
+            <span className="text-yellow-300">AI活用ロードマップ</span>を
             <br />
-            お届け！
+            無料プレゼント！
           </motion.h2>
 
           <motion.div
@@ -52,8 +52,9 @@ export default function LineCTASection() {
             </h3>
             <div className="space-y-3 text-left max-w-md mx-auto">
               {[
-                "Claude Codeスタートガイド",
-                "無料相談"
+                "AI活用ロードマップ（PDF）",
+                "ChatGPT・Claude活用テンプレート集",
+                "プロンプト実例100選"
               ].map((item, index) => (
                 <motion.div
                   key={index}

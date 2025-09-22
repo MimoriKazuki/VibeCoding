@@ -141,7 +141,7 @@ export default function PricingSection() {
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
                   </svg>
-                  LINE登録で今すぐ申し込む
+                  AIロードマップを無料でGET
                 </motion.a>
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -149,7 +149,7 @@ export default function PricingSection() {
                   transition={{ duration: 0.5, delay: 0.7 }}
                   className="text-sm text-secondary-600 mt-3"
                 >
-                  ※LINEからのお申し込みで詳細をご案内します
+                  ※LINE登録でAI活用ロードマップを無料プレゼント
                 </motion.p>
               </motion.div>
             </div>
