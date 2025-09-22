@@ -115,13 +115,13 @@ export default function ModernCTASection() {
               <svg className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span className="font-noto">HP・LP制作講座 20,000円</span>
+              <span className="font-noto">月額10,000円</span>
             </div>
           </motion.div>
 
           {/* Urgency indicator */}
           <motion.div
-            className="mt-6 sm:mt-8"
+            className="mt-6 sm:mt-8 flex justify-center"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.6, delay: 0.6 }}

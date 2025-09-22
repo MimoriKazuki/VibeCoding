@@ -51,21 +51,21 @@ export default function PricingSection() {
                   {/* Course Title */}
                   <div className="mb-4">
                     <h3 className="text-xl sm:text-2xl font-bold text-secondary-900 mb-2">
-                      HP・LP制作講座
+                      AI学び放題プラン
                     </h3>
                   </div>
 
                   {/* Original Price with Strikethrough */}
                   <div className="mb-2">
                     <span className="text-2xl sm:text-3xl text-gray-400 line-through">
-                      30,000円
+                      20,000円
                     </span>
                   </div>
-                  
+
                   {/* Current Price */}
                   <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-4">
                     <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-secondary-900">
-                      20,000
+                      月額 10,000
                     </p>
                     <span className="text-lg sm:text-xl md:text-2xl text-secondary-600">円(税込)</span>
                   </div>
@@ -82,7 +82,7 @@ export default function PricingSection() {
                     </span>
                   </motion.div>
                   
-                  {/* One-time Payment Note */}
+                  {/* Payment Options */}
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: 1 } : { opacity: 0 }}
@@ -90,7 +90,10 @@ export default function PricingSection() {
                     className="mt-3"
                   >
                     <p className="text-sm sm:text-base text-secondary-600">
-                      買い切り価格・追加料金一切なし
+                      月額制・いつでも解約可能
+                    </p>
+                    <p className="text-sm sm:text-base text-primary-600 font-bold mt-2">
+                      年間契約なら10万円でさらにお得！
                     </p>
                   </motion.div>
                 </motion.div>
@@ -105,17 +108,17 @@ export default function PricingSection() {
               >
                 <div className="bg-white rounded-lg p-6 border-2 border-primary-200">
                   <h3 className="text-lg sm:text-xl font-bold text-secondary-900 mb-4">
-                    講座内容
+                    プラン内容
                   </h3>
                   <p className="text-secondary-700 text-sm sm:text-base leading-relaxed">
-                    Claudeを使ってホームページとLPが作れるようになるまでを
-                    <span className="font-bold text-primary-600">0から1まで</span>
-                    完全網羅。
+                    月額1万円で<span className="font-bold text-primary-600">AIを学び放題</span>の環境を提供。
+                    ChatGPTやClaudeを使った最新のAI開発手法を
+                    <span className="font-bold text-primary-600">完全網羅</span>。
                   </p>
                   <p className="text-secondary-700 text-sm sm:text-base leading-relaxed mt-3">
-                    全ての工程を<span className="font-bold text-primary-600">動画形式</span>で学習でき、
-                    実際の制作過程を見ながら、同じように手を動かすだけで
-                    <span className="font-bold text-primary-600">プロ級のサイト</span>が作れるようになります。
+                    毎月更新される<span className="font-bold text-primary-600">最新コンテンツ</span>と
+                    <span className="font-bold text-primary-600">実践的なプロジェクト</span>で、
+                    常に最先端のスキルを身につけることができます。
                   </p>
                 </div>
               </motion.div>
@@ -174,8 +177,8 @@ export default function PricingSection() {
               </div>
               <div className="p-4 sm:p-6 bg-primary-50">
                 <p className="font-bold text-primary-600 text-xs sm:text-sm mb-2">当講座</p>
-                <p className="text-xl sm:text-2xl font-bold text-primary-600">2万円</p>
-                <p className="text-xs sm:text-sm text-primary-600 mt-1">3ヶ月</p>
+                <p className="text-xl sm:text-2xl font-bold text-primary-600">月額1万円</p>
+                <p className="text-xs sm:text-sm text-primary-600 mt-1">学び放題</p>
               </div>
             </div>
           </motion.div>

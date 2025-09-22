@@ -68,8 +68,8 @@ export default function FloatingCTAButton() {
               </div>
               
               <div className="pr-2 whitespace-nowrap">
-                <div className="font-bold text-sm">LINE登録で詳細確認</div>
-                <div className="text-xs opacity-90">特別価格 20,000円</div>
+                <div className="font-bold text-sm">LINEで詳細確認</div>
+                <div className="text-xs opacity-90">特別価格 月1万円</div>
               </div>
             </motion.a>
           </motion.div>
