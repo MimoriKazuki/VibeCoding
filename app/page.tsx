@@ -23,9 +23,7 @@ export default function Home() {
         <HeroSection />
         <MediaCoverageSection />
         <ServiceFeatureSection />
-        <ModernCTASection />
         <ProblemsSection />
-        <BenefitsSection />
         <FutureSection />
         <MarketProblemSection />
         <RequiredTalentSection />

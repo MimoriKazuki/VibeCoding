@@ -17,7 +17,9 @@
       "Bash(npm run deploy:*)",
       "Bash(vercel:*)",
       "Bash(npm run dev:*)",
-      "Read(//var/folders/h2/bp8c5ty547qbq7vb6ng8jgy40000gq/T/TemporaryItems/NSIRD_screencaptureui_4lKfSj/**)"
+      "Read(//var/folders/h2/bp8c5ty547qbq7vb6ng8jgy40000gq/T/TemporaryItems/NSIRD_screencaptureui_4lKfSj/**)",
+      "Bash(git pull:*)",
+      "Bash(git rebase:*)"
     ],
     "deny": [],
     "ask": []

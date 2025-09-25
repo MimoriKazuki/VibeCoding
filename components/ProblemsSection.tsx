@@ -9,121 +9,163 @@ export default function ProblemsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: "-100px" });
 
-  const problems = [
-    {
-      message: "みんなについていけない...",
-      imageUrl: "/images/20953_color.svg",
-      alt: "困っている人",
-      position: "left"
-    },
-    {
-      message: "時間の無駄遣いしてるだけかも...",
-      imageUrl: "/images/17038_color.svg",
-      alt: "悩んでいる人",
-      position: "center"
-    },
-    {
-      message: "一人でやってると心が折れる...",
-      imageUrl: "/images/18491_color.svg",
-      alt: "落ち込んでいる人",
-      position: "right"
-    }
-  ];
-
   return (
     <section id="problems" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-secondary-50 overflow-x-hidden" ref={ref}>
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-16">
+        {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-            こんな悩みありませんか？
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary-900">
+            どんな人にむいてるの？
           </h2>
-          <p className="text-base sm:text-lg text-secondary-600">
-            プログラミング学習でよくある悩み
-          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          {problems.map((problem, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
-              className="flex flex-col items-center"
-            >
-              {/* Speech Bubble */}
-              <div className="relative mb-10 w-full max-w-[320px] sm:max-w-[360px]">
-                <motion.div
-                  initial={{ scale: 0, opacity: 0 }}
-                  animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
-                  transition={{ 
-                    duration: 0.5, 
-                    delay: 0.4 + index * 0.15,
-                    type: "spring",
-                    stiffness: 260,
-                    damping: 20
-                  }}
-                  className="relative"
-                >
-                  {/* Speech bubble using SVG background */}
-                  <div 
-                    className="relative w-full h-20 sm:h-24"
-                    style={{
-                      backgroundImage: `url('/images/e1563_1_blue.svg')`,
-                      backgroundSize: '100% 100%',
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: 'center',
-                    }}
-                  >
-                    <div className="h-full w-full flex items-center justify-center px-1 sm:px-2 md:px-3" style={{ paddingBottom: '20px' }}>
-                      <p className="text-[0.65rem] sm:text-xs md:text-sm lg:text-base xl:text-lg text-gray-800 font-medium text-center leading-tight break-words">
-                        {problem.message}
-                      </p>
+        {/* First Section with SVG on left and text on right */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20">
+          {/* Left side - SVG Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.6 }}
+            className="relative w-full h-64 sm:h-80 lg:h-96"
+          >
+            <Image
+              src="/images/13485_color.svg"
+              alt="どんな人にむいてるの？"
+              fill
+              className="object-contain"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </motion.div>
+
+          {/* Right side - Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-6"
+          >
+            <div className="space-y-10">
+              <div className="relative">
+                <h4 className="text-2xl font-bold text-secondary-900 mb-4 pb-2 border-b-2 border-primary-500 inline-block">
+                  キャリアチェンジ希望者
+                </h4>
+                <div className="space-y-4 text-secondary-600 mt-4">
+                  <div>
+                    <p className="mb-2">
+                      <span className="font-semibold text-blue-600" style={{ fontSize: '18px' }}>背景</span>
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-start">
+                        <span className="text-primary-500 mr-2">・</span>
+                        <p>営業・販売・事務など非IT職からエンジニアに転職したい。</p>
+                      </div>
                     </div>
                   </div>
-                </motion.div>
+                  <div>
+                    <p className="mb-2">
+                      <span className="font-semibold text-blue-600" style={{ fontSize: '18px' }}>課題</span>
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-start">
+                        <span className="text-primary-500 mr-2">・</span>
+                        <p>プログラミング学習を独学で始めたが挫折経験あり。情報が多すぎて何から学べばよいか分からない。</p>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-primary-500 mr-2">・</span>
+                        <p>仕事終わりで疲れて集中できない。</p>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-primary-500 mr-2">・</span>
+                        <p>パソコンを開く時間がない。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              {/* Character Image */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.15 }}
-                className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48"
-              >
-                <Image
-                  src={problem.imageUrl}
-                  alt={problem.alt}
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, 192px"
-                />
-              </motion.div>
-            </motion.div>
-          ))}
+            </div>
+          </motion.div>
         </div>
 
-        {/* Solution Arrow */}
+        {/* Second Section with text on left and SVG on right (reversed) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20">
+          {/* Left side - Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-6 order-2 lg:order-1"
+          >
+            <div className="space-y-10">
+              <div className="relative">
+                <h4 className="text-2xl font-bold text-secondary-900 mb-4 pb-2 border-b-2 border-primary-500 inline-block">
+                  スキルアップに取り組む人
+                </h4>
+                <div className="space-y-4 text-secondary-600 mt-4">
+                  <div>
+                    <p className="mb-2">
+                      <span className="font-semibold text-blue-600" style={{ fontSize: '18px' }}>背景</span>
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-start">
+                        <span className="text-primary-500 mr-2">・</span>
+                        <p>今の仕事にAIを取り入れ効率化を図りたい。新しい技術を習得したい。現状維持に満足できない人。</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="mb-2">
+                      <span className="font-semibold text-blue-600" style={{ fontSize: '18px' }}>課題</span>
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-start">
+                        <span className="text-primary-500 mr-2">・</span>
+                        <p>「明日やろう」の繰り返しで、先延ばしにしてしまう。</p>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-primary-500 mr-2">・</span>
+                        <p>モチベーションの維持が難しい。</p>
+                      </div>
+                      <div className="flex items-start">
+                        <span className="text-primary-500 mr-2">・</span>
+                        <p>何の技術から勉強していいか分からない。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </motion.div>
+
+          {/* Right side - SVG Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.6 }}
+            className="relative w-full h-64 sm:h-80 lg:h-96 order-1 lg:order-2"
+          >
+            <Image
+              src="/images/7397_color.svg"
+              alt="スキルアップに取り組む人"
+              fill
+              className="object-contain"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </motion.div>
+        </div>
+
+        {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 sm:mt-16 text-center"
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center"
         >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="inline-block"
-          >
-            <svg className="w-10 h-10 sm:w-12 sm:h-12 text-primary-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </motion.div>
           <p className="mt-4 text-lg sm:text-xl font-bold text-primary-600">
             そんな悩みを「AI人材養成所」で解決します！
           </p>
